@@ -24,10 +24,10 @@ const initializeDataSource = async () => {
 initializeDataSource();
 
 // mongoDB
-mongoose
-  .connect("mongodb://localhost:27017/assignment3")
-  .then(() => console.log("MongoDB connected"))
-  .catch((err) => console.log(err));
+// mongoose
+//   .connect("mongodb://localhost:27017/assignment3")
+//   .then(() => console.log("MongoDB connected"))
+//   .catch((err) => console.log(err));
 
 const app = express();
 

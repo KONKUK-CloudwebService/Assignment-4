@@ -31,12 +31,12 @@ const baseResponseStatus = {
     responseCode: 2010,
     responseMessage: "이메일 혹은 비밀번호가 잘못되었습니다.",
   },
-  // DUPLICATED_EMAIL: {
-  //   key: "DUPLICATED_EMAIL",
-  //   isSuccess: false,
-  //   responseCode: 2011,
-  //   responseMessage: "중복된 이메일입니다.",
-  // },
+  DUPLICATED_EMAIL: {
+    key: "DUPLICATED_EMAIL",
+    isSuccess: false,
+    responseCode: 2011,
+    responseMessage: "중복된 이메일입니다.",
+  },
   // INVALID_USER: {
   //   key: "INVALID_USER",
   //   isSuccess: false,
