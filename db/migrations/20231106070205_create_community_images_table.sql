@@ -1,5 +1,5 @@
 -- migrate:up
-CREATE TABLE community_images -- 개발자 커뮤니티 이미지들 / 공지사항 이미지들
+CREATE TABLE community_images -- 커뮤니티 이미지들 
 (
     id                  BIGINT NOT NULL AUTO_INCREMENT,
     community_id        BIGINT NOT NULL,
