@@ -51,52 +51,7 @@ const signIn = async (req, res) => {
   }
 };
 
-const getPostsByUserId = async (req, res) => {
-  try {
-    const { userId } = req.params;
-
-    const rows = await userService.getPostsByUserId(userId);
-    if (rows.length === 0) {
-      throw new CustomException(NONE_POST);
-    }
-    const processedPosts = userService.processPosts(rows);
-
-    const data = {
-      userId: rows[0].userId,
-      userProfileImage: rows[0].userProfileImage,
-      postings: processedPosts,
-    };
-
-    return baseResponse(data, res);
-  } catch (error) {
-    console.log(error);
-    return baseResponse(error, res);
-  }
-};
-
-const updatePostByUserId = async (req, res) => {
-  try {
-    const { userId, postId } = req.params;
-    const { content } = req.body;
-    const imageUrl = req.uploadedFileUrls;
-
-    const rows = await userService.updatePostContent(
-      userId,
-      postId,
-      content,
-      imageUrl
-    );
-
-    return baseResponse(rows, res);
-  } catch (error) {
-    console.log(error);
-    return baseResponse(error, res);
-  }
-};
-
 module.exports = {
   signUp,
   signIn,
-  getPostsByUserId,
-  updatePostByUserId,
 };
